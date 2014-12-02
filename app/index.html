@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Map Locator</title>
+<link rel="stylesheet" href="css/all.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+        <h3>Map Locator</h3>
+    </div>
+    
+        <strong>Instructions</strong>
+    <ul>
+        <li>Click on the map or drag the marker to get the latitude and longitude of a location.</li>
+        <li>Use the search box to search an specified address.</li>
+        <li>Use the <em>copy</em> buttons to copy the values to your clip board.</li>
+    </ul>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <div id="mapmarker"></div>
+        </div>
+        <div class="col-sm-6">
+            <div id="lat_n_lng" class="row">
+                <div class="col-sm-5">
+                    Latitude: <strong><span id="lat"></span></strong>
+                    <button id="btn-copy-lat" class="btn btn-default btn-xs" type="button">Copy</button>
+                </div>
+                <div class="col-sm-5">
+                    Longitude: <strong><span id="lng"></span></strong>
+                    <button id="btn-copy-lng" class="btn btn-default btn-xs" type="button">Copy</button>
+                </div>
+                <div class="col-sm-1">
+                    <button id="btn-copy-all" class="btn btn-default btn-xs" type="button">Copy All</button>
+                </div>
+            </div>
+
+            <hr/>
+
+            <form action="javascript:;" id="form-search">
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="form-group">
+                        <label for="search">Search Address:</label>
+                        <input class="form-control" placeholder="Enter address" name="search" type="text" id="search">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <label for="">&nbsp;</label>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+            </form>
+
+            <ol id="search-results"></ol>
+        </div>
+    </div>
+
+    <div id="footer" class="text-center">
+        <p>
+            ¿Like this tool? Then follow me:
+            <a href="https://twitter.com/sahibalejandro" target="_blank">@sahibalejandro</a>
+        </p>
+        <p>
+            This is a free tool powered by:
+            <a href="https://bitbucket.org/sahibalejandro/jquery.mapmarker" target="_blank">Sahib's jQuery.MapMarker</a>
+        </p>
+    </div>
+
+    </div><!-- div.container -->
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyADS1NxxAXKATi1jgRdvfndNZiFe5HCdPk"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>
