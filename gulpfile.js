@@ -96,7 +96,7 @@ gulp.task('minfy-css', ['concat-css'], function ()
  *
  * Minfy HTML
  */
-gulp.task('minify-html', function ()
+gulp.task('minify-html', ['publish-html'], function ()
 {
     return gulp.src('public/index.html')
         .pipe(minifyHtml())
@@ -129,4 +129,4 @@ gulp.task('live', function ()
  * Start development tasks.
  */
 gulp.task('default', ['concat-js', 'concat-css', 'publish-html', 'live']);
-gulp.task('prod', ['uglify', 'minfy-css', 'publish-html', 'minify-html']);
+gulp.task('prod', ['uglify', 'minfy-css', 'minify-html']);
