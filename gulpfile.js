@@ -68,6 +68,17 @@ gulp.task('publish-html', function ()
 }); // publish-html
 
 /* ------------------------------------------------------------
+ * Task publish-zclip
+ *
+ * Publish index.html
+ */
+gulp.task('publish-zclip', function ()
+{
+    return gulp.src('bower_components/jquery-zclip/ZeroClipboard.swf')
+        .pipe(gulp.dest('public/'));
+}); // publish-zclip
+
+/* ------------------------------------------------------------
  * Task uglify
  *
  * Uglify javascript
@@ -128,5 +139,5 @@ gulp.task('live', function ()
  *
  * Start development tasks.
  */
-gulp.task('default', ['concat-js', 'concat-css', 'publish-html', 'live']);
-gulp.task('prod', ['uglify', 'minfy-css', 'minify-html']);
+gulp.task('default', ['concat-js', 'concat-css', 'publish-html', 'publish-zclip', 'live']);
+gulp.task('prod', ['uglify', 'minfy-css', 'minify-html', 'publish-zclip']);
