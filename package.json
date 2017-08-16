@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "bower": "^1.8.0",
     "gulp": "^3.8.10",
     "gulp-concat": "^2.4.2",
     "gulp-livereload": "^2.1.1",
